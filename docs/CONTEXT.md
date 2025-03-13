@@ -28,12 +28,12 @@ This document provides a detailed breakdown of the mobile shopping app "Shopai",
 - `expo`
 - `expo-router`
 - `nativewind` (tailwind for react native)
-- `react-native-reusables` (shadcn for react native)
+- `react-native-reusables` (shadcn for react native - use "npx @react-native-reusables/cli@latest add" to add components)
 - `react-native-reanimated` (animations)
 - `react-native-gesture-handler` (gestures)
 - `react-native-deck-swiper` (card-swiping interactions)
 - `react-native-reanimated-carousel` (card view image carousel)
-- `@heroicons/react` (icons)
+- `react-native-heroicons` (icons)
 - `expo-linear-gradient` (gradients)
 - `expo-image` (image handling)
 - `@gorhom/bottom-sheet` (bottom sheet/modal)
@@ -42,6 +42,28 @@ This document provides a detailed breakdown of the mobile shopping app "Shopai",
 - `@tanstack/react-query`
 - `zod`
 - `expo-in-app-purchases`
+- `@react-navigation/native` (works with expo-router)
+- `@rn-primitives/avatar` (part of react-native-reusables primitives)
+- `@rn-primitives/portal` (part of react-native-reusables primitives)
+- `@rn-primitives/progress` (part of react-native-reusables primitives)
+- `@rn-primitives/slot` (part of react-native-reusables primitives)
+- `@rn-primitives/tooltip` (part of react-native-reusables primitives)
+- `@rn-primitives/types` (part of react-native-reusables primitives)
+- `class-variance-authority` (utility for component variants)
+- `clsx` (utility for conditional class names)
+- `expo-linking` (deep linking support)
+- `expo-navigation-bar` (navigation bar customization)
+- `expo-splash-screen` (splash screen management)
+- `expo-status-bar` (status bar management)
+- `expo-system-ui` (system UI integration)
+- `input-otp-native` (OTP input component)
+- `react-native-screens` (optimized screen containers)
+- `react-native-svg` (SVG support)
+- `react-native-web` (web support)
+- `sonner-native` (toast notifications)
+- `tailwind-merge` (utility for merging tailwind classes)
+- `tailwindcss` (CSS utility framework)
+- `tailwindcss-animate` (animation utilities for tailwind)
 
 ### Backend & Integration:
 - `@supabase/supabase-js`

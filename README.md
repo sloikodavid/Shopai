@@ -1,13 +1,16 @@
-# Expo Router Example
+# Starter base
 
-Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
+A starting point to help you set up your project quickly and use the common components provided by `react-native-reusables`. The idea is to make it easier for you to get started.
 
-## 🚀 How to use
+## Features
 
-```sh
-npx create-expo-app -e with-router
-```
+- NativeWind v4
+- Dark and light mode
+  - Android Navigation Bar matches mode
+  - Persistent mode
+- Common components
+  - ThemeToggle, Avatar, Button, Card, Progress, Text, Tooltip
 
-## 📝 Notes
-
-- [Expo Router: Docs](https://docs.expo.dev/router/introduction/)
+<img src="https://github.com/mrzachnugent/react-native-reusables/assets/63797719/42c94108-38a7-498b-9c70-18640420f1bc"
+     alt="starter-base-template"
+     style="width:270px;" />

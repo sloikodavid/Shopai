@@ -2,7 +2,8 @@
 
 ## Core Development Rules
 - Focus exclusively on requested tasks and changes
-- Use Windows PowerShell 5 commands without chaining
+- Use the web as much as you can to be sure you're doing the latest and correct thing
+- Use Windows PowerShell 5-7 commands without chaining
 - Document all changes in docs/CHANGELOG.md with:
   - Version numbers (no dates)
   - Specific file locations
