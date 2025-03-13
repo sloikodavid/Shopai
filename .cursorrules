@@ -1,0 +1,104 @@
+# Shopai Development Guidelines
+
+## Core Development Rules
+- Focus exclusively on requested tasks and changes
+- Use Windows PowerShell 5 commands without chaining
+- Document all changes in docs/CHANGELOG.md with:
+  - Version numbers (no dates)
+  - Specific file locations
+  - Detailed descriptions of changes
+  - Package versions and dependencies
+  - Never remove existing changelog entries
+
+## Project Management
+- Reference docs/CONTEXT.md for:
+  - Project architecture and context
+  - Technology stack requirements
+  - Feature specifications
+  - Integration patterns
+- Maintain changelog accuracy when removing/updating features
+- Keep packages updated to latest stable versions
+- Address vulnerabilities and deprecations proactively
+- Fix code issues immediately upon detection
+
+## Package Management
+- Current development year: 2025
+- Preserve all packages listed in docs/CONTEXT.md Tech Stack
+- Only update packages when necessary, never remove
+- Use latest stable versions unless specific version required
+- Maximize usage of installed packages
+- Avoid package redundancy
+
+## Development Workflow
+- Let user handle npm/expo start commands
+- Maintain expo-router architecture
+- Keep file structure minimal and purposeful
+- Follow established patterns in docs/CONTEXT.md
+
+## Design Guidelines
+- Use `npx @react-native-reusables/cli@latest add` to add react-native-reusables components
+
+# Shopai Project-Specific Rules
+
+## Architecture Guidelines
+- ALWAYS follow the file structure outlined in docs/CONTEXT.md section 2.
+- ALL React components should be functional components with TypeScript typing.
+- Use the provided data models and architecture in docs/CONTEXT.md for any data structures.
+- Supabase integration MUST follow the patterns in docs/CONTEXT.md section 5.
+- ALWAYS implement subscription-gated features following docs/CONTEXT.md section 7.
+
+## Coding Standards
+- ALWAYS use TypeScript with strict type checking enabled.
+- Ensure all Supabase operations are wrapped in try/catch blocks with proper error handling.
+- React components should use react-native-reusables design system consistently.
+- Use Zustand for global state management following patterns in docs/CONTEXT.md.
+- Implement React Query for data fetching with proper caching strategies.
+- ALL forms must use Zod for validation with proper error messages.
+
+## Supabase and n8n Integration
+- NEVER directly access Supabase APIs from components - always use service abstraction layers.
+- ALL Supabase Edge Functions must include proper authentication and validation.
+- Edge Functions for n8n workflows must follow patterns in docs/CONTEXT.md section 6.
+- Optimize API calls to minimize costs, especially for the Gemini API and DataForSEO integration.
+- ALWAYS include proper authentication validation for production-facing APIs.
+
+## In-App Purchase Implementation
+- Use expo-in-app-purchases exactly as specified in docs/CONTEXT.md section 7.
+- Implement server-side purchase validation for both iOS and Android.
+- Follow the subscription plans and free trial mechanics in docs/CONTEXT.md section 7.1-7.3.
+- Store subscription state securely in Supabase with proper validation.
+
+## AI Integration Guidelines
+- n8n workflow calls MUST use the patterns specified in docs/CONTEXT.md section 6.
+- Gemini API requests should follow the conversation processing workflow in docs/CONTEXT.md.
+- Optimize API calls to minimize costs between regular Gemini API and Search-grounded API.
+- Properly integrate DataForSEO for product information retrieval.
+
+## UI/UX Requirements
+- Implement swipe gestures with react-native-gesture-handler and react-native-reanimated.
+- Use react-native-deck-swiper for card deck interactions exactly as specified.
+- Create smooth animations with react-native-reanimated (minimum 60fps).
+- Bottom sheets MUST use @gorhom/bottom-sheet with proper performance optimization.
+- Follow the navigation flow described in docs/CONTEXT.md section 4.
+
+## Performance Guidelines
+- AVOID unnecessary re-renders by using memo, useMemo, and useCallback appropriately.
+- Optimize list rendering with proper keys and virtualization.
+- Implement proper image loading strategies with expo-image.
+- Use eager loading only for critical UI elements; implement lazy loading elsewhere.
+- Supabase queries must include proper indexing and limits to reduce data transfer.
+
+## Testing Requirements
+- Write unit tests for all utility functions and critical business logic.
+- Test Supabase integration with proper mocking.
+- Include snapshot tests for critical UI components.
+- Add integration tests for key user flows (authentication, search, card interaction).
+- Test in-app purchase flow with sandbox environments.
+
+# Mandatory Task Tracking Rules
+
+# These rules help track todo items in the docs/CONTEXT.md file 
+# and convert uncompleted to completed items with checkbox format
+# Usage: Add tasks as "[ ] Task name" and mark them as "[x] Task name" when completed
+- \[ \] (.+)$
+- \[x\] (.+)$
